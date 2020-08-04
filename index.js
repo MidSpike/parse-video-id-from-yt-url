@@ -15,6 +15,8 @@ module.exports = (youtube_url_input) => {
     try {
         potential_url = new URL(`${youtube_url_input}`);
     } catch {} // Carry on by treating any non-url as undefined
+    
+    potential_url = potential_url.replace(`/www.`, '/'); // Remove `www.` from the url
 
     if (!youtube_hostnames.includes(potential_url?.hostname)) throw new TypeError('youtube_url_input must be a valid youtube url!');
 
