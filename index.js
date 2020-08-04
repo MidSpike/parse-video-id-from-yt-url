@@ -26,7 +26,7 @@ module.exports = (youtube_url_input) => {
     if (['youtube.com'].includes(youtube_url.hostname)) {
         const youtube_url_search_params = new URLSearchParams(youtube_url.search);
         parsed_youtube_id = youtube_url_search_params.get('v');
-    } else if (['youtube.com'].includes(youtube_url.hostname)) {
+    } else if (['youtu.be'].includes(youtube_url.hostname)) {
         parsed_youtube_id = youtube_url.pathname.replace('/', '');
     }
 

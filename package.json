@@ -1,6 +1,6 @@
 {
   "name": "parse-video-id-from-yt-url",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Returns the video id from a youtube url",
   "main": "index.js",
   "scripts": {
