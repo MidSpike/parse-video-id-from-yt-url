@@ -11,12 +11,12 @@ const youtube_hostnames = [
  * @returns {String|undefined} a youtube video if it finds it, undefined if not
  */
 module.exports = (youtube_url_input) => {
+    youtube_url_input = youtube_url_input.replace(`/www.`, '/'); // Remove `www.` from the url_input
+
     let potential_url = undefined;
     try {
         potential_url = new URL(`${youtube_url_input}`);
     } catch {} // Carry on by treating any non-url as undefined
-    
-    potential_url = potential_url.replace(`/www.`, '/'); // Remove `www.` from the url
 
     if (!youtube_hostnames.includes(potential_url?.hostname)) throw new TypeError('youtube_url_input must be a valid youtube url!');
 
