@@ -1,0 +1,19 @@
+{
+  "name": "parse-video-id-from-yt-url",
+  "version": "1.0.0",
+  "description": "Returns the video id from a youtube url",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MidSpike/parse-video-id-from-yt-url.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MidSpike/parse-video-id-from-yt-url/issues"
+  },
+  "homepage": "https://github.com/MidSpike/parse-video-id-from-yt-url#readme"
+}

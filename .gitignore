@@ -1,0 +1,6 @@
+*.bat
+*.cmd
+*.env
+.vscode
+node_modules
+__*
