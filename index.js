@@ -1,6 +1,7 @@
 'use strict';
 
 const youtube_hostnames = [
+    'music.youtube.com',
     'youtube.com',
     'youtu.be',
 ];
@@ -23,7 +24,7 @@ module.exports = (youtube_url_input) => {
     const youtube_url = potential_url; // We can safely assume that it is a youtube url now
 
     let parsed_youtube_id = undefined;
-    if (['youtube.com'].includes(youtube_url.hostname)) {
+    if (['youtube.com', 'music.youtube.com'].includes(youtube_url.hostname)) {
         const youtube_url_search_params = new URLSearchParams(youtube_url.search);
         parsed_youtube_id = youtube_url_search_params.get('v');
     } else if (['youtu.be'].includes(youtube_url.hostname)) {
